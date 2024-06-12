@@ -105,6 +105,10 @@
   font-weight: bold;
 }
 
+.restart-btn-container {
+  margin: 20px auto; 
+}
+
 .restart-btn {
   margin: 20px auto;
   padding: 10px 20px;
