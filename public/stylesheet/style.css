@@ -9,7 +9,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   position: relative;
   background: radial-gradient(
     circle,
@@ -30,6 +30,11 @@
 
 .chessboard.flipped {
   transform: rotate(180deg);
+}
+
+.side-container {
+  display: flex;
+  align-items: center;
 }
 
 .piece {
@@ -88,16 +93,16 @@
 
 .message-container {
   position: absolute;
-  top: 50%;
-  left: calc(50% + 300px);
-  transform: translateY(-50%);
+  top: 40%;
+  left: calc(50% + 280px);
+  transform: translateY(-48%);
   background-color: #ffcccc;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .message {
@@ -105,12 +110,8 @@
   font-weight: bold;
 }
 
-.restart-btn-container {
-  margin: 20px auto; 
-}
-
 .restart-btn {
-  margin: 20px auto;
+  margin: 200px auto;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -128,11 +129,19 @@
 }
 
 @media screen and (max-width: 769px) {
+  .container {
+    flex-direction: column;
+  }
   .chessboard {
     width: 80vw;
     height: 80vw;
   }
   .piece {
     font-size: 2rem;
+  }
+  .message-container {
+    top: 60%;
+    left: 30%;
+    transform: translateY(-50%);
   }
 }
